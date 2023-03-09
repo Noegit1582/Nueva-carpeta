@@ -4,22 +4,25 @@
     border: 1px solid blue;
     box-sizing: border-box;}
 
+    /***VISTA DESKTOP***/
+/*@media (min-width: 64em) {
+
 body{
     background-image: url(./bg-main-desktop.png);
     background-repeat: no-repeat;
-    background-size: 30%;
-    width: 100vw;
+    background-size: 24em;
+    width: 95vw;
     height: 100%;
 }
 
 main{
-    width: 100%;
+    width: 95%;
     height: 75%;
     display: grid;
-grid-template-columns: 2 auto;
-grid-template-rows: 1 auto;
-grid-template-areas: 
-"tarjetas form"; 
+    grid-template-columns: 2 auto;
+    grid-template-rows: 1 auto;
+    grid-template-areas: 
+    "tarjetas form"; 
 }
 
 form{
@@ -28,12 +31,12 @@ form{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    font-size: 18px;
+    font-size: 1.125em;
     font-family: Space Grotesk;
-    margin-right: 85px;
-    margin-top: 100px;
-    padding: 50px;
-
+    margin-right: 2.313em;
+    margin-left: 0;
+    margin-top: 6.25em;
+    padding: 3.125em;
 }
 
 button{
@@ -41,14 +44,13 @@ button{
     justify-content: center;
     color: rgb(172, 156, 187);
     font-family: Space Grotesk;
-    font-size: 18px;
+    font-size: 1.125em;
     background-color: rgb(63, 9, 58);
-
     width: 20em;
     height: 2em;
-    border-radius: 5px;
-    margin-top: 10px;
-    padding-top: 5px;
+    border-radius: 0.313em;
+    margin-top: 0.625em;
+    padding-top: 0.313em ;
     transition: bacground-color blue;
     transition: color rgb(172, 156, 187) ;
 }
@@ -56,23 +58,34 @@ button{
 button:hover{
     background-color:violet;
     color: black;
-
 }
+
 .card_front{
+    background-image: url(./imágenes/bg-card-front.png);
+    background-repeat: no-repeat;
+    background-size: auto;
     position:relative;
     display:flex;
     text-align: center;
     color: aliceblue;
-
+    z-index: 1;
+    width: 400px;
+    height: 250px;
+    margin: 6.25em 0px 1.25px 6.25em;
 }
 
 .icono{
 position: absolute;
-margin-top: 120px;
-margin-left: 125px;
+margin-top: 1.5em;
+margin-left: 1.5em;
 }
 
 .back{
+    background-image: url(./imágenes/bg-card-back.png);
+    background-repeat: no-repeat;
+    background-size: 98%;
+    width: 400px ;
+    height: 250px;
     position:relative;
     display:flex;
     text-align: center;
@@ -80,60 +93,52 @@ margin-left: 125px;
 }
 
 
+
 .nb{
     position: absolute;
-    margin-top: 225px;
-    margin-left: 150px;
-    font-size: 25px;
+    margin-top: 5.063em;
+    margin-left: 1.375em;
+    font-size: 1.563em;
     font-family: Space Grotesk;
-}
+    letter-spacing: 1px;
+    word-spacing: 6px;
+} 
 
 .nombre{
     position: absolute;
     display: flex;
     flex-direction: row;
     justify-content:stretch;
-    margin-top: 280px;
-    margin-left: 150px;
+    margin-top: 12.5em;
+    margin-left:2.375em;
     font-family: Space Grotesk;
-}
-
-.cad{
-    margin-left: 8em;
-}
-
-
-.front_card{
-    margin: 100px 0px 20px 100px;
 }
 
 .vc{
     position: absolute;
-color: aliceblue;
-margin-top: 100px;
-margin-left: 320px;
+    color: aliceblue;
+    margin-top: 6.25em;
+    margin-left: 20em;
 }
 
 .back{
-    margin: 20px 0px 0px 200px;
+    margin: 1.25em 0px 0px 12.5em;
 }
 
 label{
-margin-bottom: 20px;
+    margin-bottom: 1.25em;
 }
-
 
 input{
     border: 1px solid hsl(249, 99%, 64%);
     border-radius: 3px;
-    font-size: 12px;
-    padding: 12px;
+    font-size: 0.75em;
+    padding: 0.75em;
     width: 30em;
     margin-top: 0.5em;
     border-top-color: rgb(145, 141, 141) ;
     -webkit-transition: 0.5s;
     transition: 0.5s;
-
 }
 
 .exp{
@@ -145,15 +150,15 @@ input{
 }
 
 .cvc{
-    height: 5px;
+    height: 0.313em;
     
 }
 
 .numbercc{
-display: flex;
-flex-direction: row;
-justify-content: left;
-margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-top: 0px;
 }
 
 .exp_input{
@@ -170,7 +175,7 @@ margin-top: 0px;
     
 }
 
-
+} */
 
 
 
@@ -182,28 +187,28 @@ margin-top: 0px;
 
 /****VISTA MOBILE****/
 
-/* @media (min-width: 370px) {
+@media (min-width: 370px)  {
 
-    body{
+body{
         background-image: url(./bg-main-mobile.png);
         background-repeat: no-repeat;
-        width: 85%;
+        width: 30em;
         height: auto;
         display: flex;
         flex-direction: column;
     }
 
-    form{
+form{
         display: flex;
         flex-direction: column;
-        margin-top: 20em;
+        margin-top: 10em;
         margin-left: 2em;
         font-family: 'Space Grotesk', sans-serif;
         font-size: 1em;
         width: 95%;
     }   
-    
-    .fechas{
+
+.fechas{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -214,36 +219,138 @@ margin-top: 0px;
         margin-bottom: 15px;
         width: 18px;
     }
-    
-    input{
+
+input{
         border: 1px solid black;
         border-radius: 2px;
         font-size: 20px;
-    
     }
-    .month{
+
+.month{
         grid-area: "month";
-        width: 90px;
     }
-    .year{
+
+.year{
     grid-area: "year";
-    width: 90px;
     }
-    .cvc{
-        grid-area: "cvc";
-        width: 120px;
+
+.cvc{
+    grid-area: "cvc";
     }
-    
-    button{
-    color: blueviolet;
-    background-color: rgb(63, 9, 58);
+
+button{
+        display: flex;
+        justify-content: center;
+        color: rgb(172, 156, 187);
+        font-family: Space Grotesk;
+        font-size: 1.125em;
+        background-color: rgb(63, 9, 58);
+        width: 15em;
+        height: 2em;
+        border-radius: 0.313em;
+        margin-top: 0.625em;
+        padding-top: 0.313em ;
+        transition: color rgb(172, 156, 187) ;
     }
+
+button:hover{
+        background-color:violet;
+        color: black;
 }
-.cardf{
+
+.card_front{
     background-image: url(./imágenes/bg-card-front.png);
     background-repeat: no-repeat;
-    width: 12em;
+    width: 250px;
+    height: 150px; 
+    position: absolute;
+    top: 120px;
+    left: 30px;
+    z-index: 3;
+} 
+
+.back{
+        position: relative;
+        background-image: url(./imágenes/bg-card-back.png);
+        background-repeat: no-repeat;
+        background-size: 98%;
+        width: 250px ;
+        height: 150px;
+        position:relative;
+        display:flex;
+        text-align: center;
+        color: aliceblue;  
+        z-index: 0;
+        margin-top: 20px;
+        margin-left: 100px;
+    }
+
+.vc{
+    margin-top: 20px;
+    margin-left: 200px;
+}
+.nombre{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    margin-top: 6.5em;
+    margin-left:2.375em;
+    font-family: Space Grotesk;
+    color: aliceblue;
+}
+
+.nb{
+    position: absolute;
+    margin-top: 5.063em;
+    margin-left: 1.375em;
+    font-size:1emem;
+    font-family: Space Grotesk;
+    letter-spacing: 1px;
+    word-spacing: 6px;
+    color: aliceblue;
+} 
+.icono{
+    position: absolute;
+    margin-top: 1em;
+    margin-left: 1em;
+    }
+
+img{
+    width: 4em;
+}
+
+input{
+    border: 1px solid hsl(250, 2%, 48%);
+    border-radius: 3px;
+    font-size: 0.75em;
+    padding: 0.75em;
+    width: 25em;
+    margin-top: 0.5em;
+    border-top-color: rgb(145, 141, 141) ;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.exp_input{
+    width: 5em;
+    height: 3em;
+    margin-top: 0.5em;
+}
+
+.cvc_input{
+    width: 10em;
+    height: 3em;
+    margin-top: 2.5em;
+    margin-right: 3em;
+    
+}
+
+.exp{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
     height: 5em;
+    margin-top: 1em;
+}
 
-} */
-
+} 
