@@ -43,13 +43,21 @@ button{
     font-family: Space Grotesk;
     font-size: 18px;
     background-color: rgb(63, 9, 58);
+
     width: 20em;
     height: 2em;
     border-radius: 5px;
     margin-top: 10px;
     padding-top: 5px;
-    }
+    transition: bacground-color blue;
+    transition: color rgb(172, 156, 187) ;
+}
 
+button:hover{
+    background-color:violet;
+    color: black;
+
+}
 .card_front{
     position:relative;
     display:flex;
@@ -116,7 +124,7 @@ margin-bottom: 20px;
 
 
 input{
-    border: 1px solid rgb(197, 194, 194);
+    border: 1px solid hsl(249, 99%, 64%);
     border-radius: 3px;
     font-size: 12px;
     padding: 12px;
