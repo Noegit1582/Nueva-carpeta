@@ -1,16 +1,15 @@
 *{
     margin: 0;
     padding: 0;
-    border: 1px solid blue;
     box-sizing: border-box;}
 
     /***VISTA DESKTOP***/
-/*@media (min-width: 64em) {
+
 
 body{
     background-image: url(./bg-main-desktop.png);
     background-repeat: no-repeat;
-    background-size: 24em;
+    background-size: 20em;
     width: 95vw;
     height: 100%;
 }
@@ -53,17 +52,18 @@ button{
     padding-top: 0.313em ;
     transition: bacground-color blue;
     transition: color rgb(172, 156, 187) ;
+    border-bottom: none;
 }
 
 button:hover{
     background-color:violet;
-    color: black;
+    color: rgb(39, 37, 37);
 }
 
 .card_front{
     background-image: url(./imágenes/bg-card-front.png);
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: 98%;
     position:relative;
     display:flex;
     text-align: center;
@@ -76,14 +76,14 @@ button:hover{
 
 .icono{
 position: absolute;
-margin-top: 1.5em;
-margin-left: 1.5em;
+margin-top: 1em;
+margin-left: 1em;
 }
 
 .back{
     background-image: url(./imágenes/bg-card-back.png);
     background-repeat: no-repeat;
-    background-size: 98%;
+    background-size: 100%;
     width: 400px ;
     height: 250px;
     position:relative;
@@ -97,25 +97,27 @@ margin-left: 1.5em;
 .nb{
     position: absolute;
     margin-top: 5.063em;
+    margin-bottom: 30px;
     margin-left: 1.375em;
-    font-size: 1.563em;
+    font-size: 1.5em;
     font-family: Space Grotesk;
     letter-spacing: 1px;
     word-spacing: 6px;
 } 
 
 .nombre{
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content:stretch;
-    margin-top: 12.5em;
-    margin-left:2.375em;
+    margin-top: 11em;
+    margin-left:1.375em;
     font-family: Space Grotesk;
+
 }
 
 .vc{
-    position: absolute;
+    position: relative;
     color: aliceblue;
     margin-top: 6.25em;
     margin-left: 20em;
@@ -139,6 +141,10 @@ input{
     border-top-color: rgb(145, 141, 141) ;
     -webkit-transition: 0.5s;
     transition: 0.5s;
+    box-shadow: 2px 2px 0px grey;
+}
+input:focus{
+    background-color: rgb(210, 214, 214);
 }
 
 .exp{
@@ -151,6 +157,7 @@ input{
 
 .cvc{
     height: 0.313em;
+    margin-left: 2em;
     
 }
 
@@ -174,8 +181,14 @@ input{
     margin-right: 3em;
     
 }
+.cad{
+    margin-left: 10em;
+}
+fieldset{
+    border: none
+}
 
-} */
+
 
 
 
@@ -187,28 +200,30 @@ input{
 
 /****VISTA MOBILE****/
 
-@media (min-width: 370px)  {
+@media (max-width: 728px)  {
 
 body{
         background-image: url(./bg-main-mobile.png);
         background-repeat: no-repeat;
-        width: 30em;
+        background-size: 100%;
+        width: auto;
         height: auto;
         display: flex;
         flex-direction: column;
+        justify-content: center;
     }
 
 form{
         display: flex;
         flex-direction: column;
-        margin-top: 10em;
-        margin-left: 2em;
+        margin-top: 5em;
+        margin-left:1em;
         font-family: 'Space Grotesk', sans-serif;
         font-size: 1em;
-        width: 95%;
+        width:85%;
     }   
 
-.fechas{
+.exp{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -218,6 +233,10 @@ form{
         margin-top: 15px;
         margin-bottom: 15px;
         width: 18px;
+    }
+
+    legend{
+        grid-area: "label1";
     }
 
 input{
@@ -248,7 +267,7 @@ button{
         width: 15em;
         height: 2em;
         border-radius: 0.313em;
-        margin-top: 0.625em;
+        margin-top: 4.5em;
         padding-top: 0.313em ;
         transition: color rgb(172, 156, 187) ;
     }
@@ -264,8 +283,8 @@ button:hover{
     width: 250px;
     height: 150px; 
     position: absolute;
-    top: 120px;
-    left: 30px;
+    top: 1.5em;
+    margin-left: 25px;
     z-index: 3;
 } 
 
@@ -281,29 +300,29 @@ button:hover{
         text-align: center;
         color: aliceblue;  
         z-index: 0;
-        margin-top: 20px;
-        margin-left: 100px;
+        margin-top: 2em;
+        margin-left: 70px;
     }
 
 .vc{
-    margin-top: 20px;
-    margin-left: 200px;
+    margin-top: 55px;
+    margin-left: 190px;
 }
 .nombre{
     position: absolute;
     display: flex;
     flex-direction: row;
     margin-top: 6.5em;
-    margin-left:2.375em;
+    margin-left:1.375em;
     font-family: Space Grotesk;
     color: aliceblue;
 }
 
 .nb{
     position: absolute;
-    margin-top: 5.063em;
+    margin-top: 4.563em;
     margin-left: 1.375em;
-    font-size:1emem;
+    font-size:1em;
     font-family: Space Grotesk;
     letter-spacing: 1px;
     word-spacing: 6px;
@@ -338,19 +357,25 @@ input{
 }
 
 .cvc_input{
-    width: 10em;
+    width: 6em;
     height: 3em;
     margin-top: 2.5em;
-    margin-right: 3em;
+    margin-right: 1em;
     
 }
 
 .exp{
     display: flex;
     flex-direction: row;
-    justify-content:space-evenly;
     height: 5em;
     margin-top: 1em;
 }
+main{
+    display: flex;
+    flex-direction: column;
+}
+.cad{
+    margin-left: 1.8em;
+}
 
-} 
+}  
